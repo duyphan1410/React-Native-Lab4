@@ -1,4 +1,4 @@
-package com.lab4
+package com.firebaseauth.lab4
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

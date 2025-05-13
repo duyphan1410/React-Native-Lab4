@@ -1,4 +1,4 @@
-package com.lab4
+package com.firebaseauth.lab4
 
 import android.app.Application
 import com.facebook.react.PackageList
