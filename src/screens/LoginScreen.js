@@ -7,6 +7,8 @@ import { View, TextInput, Logo, Button, FormErrorMessage } from '../components';
 import { Images, Colors } from '../config';
 import { useTogglePasswordVisibility } from '../hooks';
 import { loginValidationSchema } from '../utils';
+import { googleSignIn } from '../providers/authService';
+import Icon from "react-native-vector-icons/FontAwesome"
 
 
 export const LoginScreen = ({ navigation }) => {
@@ -62,7 +64,7 @@ export const LoginScreen = ({ navigation }) => {
                 {/* Input fields */}
                 <TextInput
                   name='email'
-                  leftIconName='email'
+                  leftIconName='envelope'
                   placeholder='Enter email'
                   autoCapitalize='none'
                   keyboardType='email-address'
@@ -78,7 +80,7 @@ export const LoginScreen = ({ navigation }) => {
                 />
                 <TextInput
                   name='password'
-                  leftIconName='key-variant'
+                  leftIconName='key'
                   placeholder='Enter password'
                   autoCapitalize='none'
                   autoCorrect={false}
@@ -99,13 +101,13 @@ export const LoginScreen = ({ navigation }) => {
                   <FormErrorMessage error={errorState} visible={true} />
                 ) : null}
                 {/* Login button */}
-                <Button style={styles.button} onPress={handleSubmit}>
+                <Button style={[styles.button, { marginBottom:10 }]} onPress={handleSubmit}>
                   <Text style={styles.buttonText}>Login</Text>
                 </Button>
                 {/* Google Sign-In button */}
-                <Button style={[styles.button, { backgroundColor: '#4285F4' }]} onPress={handleGoogleLogin}>
+                <Icon.Button name="google" style={[styles.button, { backgroundColor: '#4285F4' }]} onPress={handleGoogleLogin}>
                   <Text style={styles.buttonText}>Login with Google</Text>
-                </Button>
+                </Icon.Button>
               </>
             )}
           </Formik>

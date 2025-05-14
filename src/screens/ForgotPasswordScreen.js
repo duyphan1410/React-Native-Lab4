@@ -42,7 +42,7 @@ export const ForgotPasswordScreen = ({ navigation }) => {
             {/* Email input field */}
             <TextInput
               name='email'
-              leftIconName='email'
+              leftIconName='envelope'
               placeholder='Enter email'
               autoCapitalize='none'
               keyboardType='email-address'

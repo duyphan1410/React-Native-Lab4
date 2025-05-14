@@ -1,9 +1,9 @@
 import React from 'react';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome from '@react-native-vector-icons/fontawesome';
 
 export const Icon = ({ name, size, color, style }) => {
   return (
-    <MaterialCommunityIcons 
+    <FontAwesome 
       name={name}
       size={size}
       color={color}

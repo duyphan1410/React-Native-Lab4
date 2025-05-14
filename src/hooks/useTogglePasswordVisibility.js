@@ -10,9 +10,9 @@ export const useTogglePasswordVisibility = () => {
   // function that toggles password visibility on a TextInput component on a password field
   const handlePasswordVisibility = () => {
     if (rightIcon === 'eye') {
-      setRightIcon('eye-off');
+      setRightIcon('eye-slash');
       setPasswordVisibility(!passwordVisibility);
-    } else if (rightIcon === 'eye-off') {
+    } else if (rightIcon === 'eye-slash') {
       setRightIcon('eye');
       setPasswordVisibility(!passwordVisibility);
     }
@@ -21,9 +21,9 @@ export const useTogglePasswordVisibility = () => {
   // function that toggles password visibility on a TextInput component on a confirm password field
   const handleConfirmPasswordVisibility = () => {
     if (confirmPasswordIcon === 'eye') {
-      setConfirmPasswordIcon('eye-off');
+      setConfirmPasswordIcon('eye-slash');
       setConfirmPasswordVisibility(!confirmPasswordVisibility);
-    } else if (confirmPasswordIcon === 'eye-off') {
+    } else if (confirmPasswordIcon === 'eye-slash') {
       setConfirmPasswordIcon('eye');
       setConfirmPasswordVisibility(!confirmPasswordVisibility);
     }
